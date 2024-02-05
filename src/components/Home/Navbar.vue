@@ -5,15 +5,34 @@
         Elin <br> Duxus
       </h1>
     </router-link>
-    <button>
-      <img src="../../assets/Home/menu.png" alt="Icone de um menu Hambúrguer" />
+    <button @click="show">
+      <img v-if="!exibir" src="../../assets/Home/menu.png" alt="Icone de um menu Hambúrguer" />
+      <img v-if="exibir" src="../../assets/Home/close.png" alt="Icone de um menu Hambúrguer" />
     </button>
   </nav>
+  <div class="menu" v-if="exibir">
+    <a href="https://github.com/AndrewGPSilva/apiElinDuxus" target="_blank">
+      Repositório API
+    </a>
+    <a href="https://github.com/AndrewGPSilva/Front_ElinDuxus" target="_blank">
+      Repositório FRONT-END
+    </a>
+  </div>
 </template>
 
 <script>
   export default {
-    name: "Navbar"
+    name: "Navbar",
+    data() {
+      return {
+        exibir: false
+      }
+    },
+    methods: {
+      show() {
+        this.exibir = !this.exibir;
+      }
+    }
   }
 </script>
 
@@ -33,5 +52,15 @@
     font-family: 'Anton', sans-serif;
     font-size: 1.3rem;
     text-align: center;
+  }
+
+  .menu {
+    text-align: right;
+    padding: 0 30px;
+    gap: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
   }
 </style>
