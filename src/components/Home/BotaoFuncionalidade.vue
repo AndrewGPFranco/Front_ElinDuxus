@@ -49,27 +49,27 @@ export default {
 </script>
 
 <style scoped>
-  main {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px;
-  }
-  
-  button {
-    width: 70px;
-    margin: 15px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-  
-  .circulo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: black;
-    margin-bottom: 5px;
-  }
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+button {
+  width: 70px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.circulo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  margin-bottom: 5px;
+}
 </style>

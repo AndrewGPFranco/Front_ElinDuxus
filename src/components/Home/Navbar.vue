@@ -11,62 +11,62 @@
     </button>
   </nav>
   <TransitionGroup name="aparicao">
-  <div class="menu" v-if="exibir">
-    <a href="https://github.com/AndrewGPSilva/apiElinDuxus" target="_blank">
-      Repositório API
-    </a>
-    <a href="https://github.com/AndrewGPSilva/Front_ElinDuxus" target="_blank">
-      Repositório FRONT-END
-    </a>
-  </div>
+    <div class="menu" v-if="exibir">
+      <a href="https://github.com/AndrewGPSilva/apiElinDuxus" target="_blank">
+        Repositório API
+      </a>
+      <a href="https://github.com/AndrewGPSilva/Front_ElinDuxus" target="_blank">
+        Repositório FRONT-END
+      </a>
+    </div>
   </TransitionGroup>
 </template>
 
 <script>
-  export default {
-    name: "Navbar",
-    data() {
-      return {
-        exibir: false
-      }
-    },
-    methods: {
-      show() {
-        this.exibir = !this.exibir;
-      }
+export default {
+  name: "Navbar",
+  data() {
+    return {
+      exibir: false
+    }
+  },
+  methods: {
+    show() {
+      this.exibir = !this.exibir;
     }
   }
+}
 </script>
 
 <style scoped>
-  nav {
-    display: flex;
-    padding: 40px;
-    justify-content: space-between;
-  }
-  
-  nav img {
-    width: 30px;
-    height: 30px;
-  }
+nav {
+  display: flex;
+  padding: 40px;
+  justify-content: space-between;
+}
 
-  nav h1 {
-    font-family: 'Anton', sans-serif;
-    font-size: 1.3rem;
-    text-align: center;
-  }
+nav img {
+  width: 30px;
+  height: 30px;
+}
 
-  .menu {
-    text-align: right;
-    padding: 0 30px;
-    gap: 20px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
-  }
+nav h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+}
 
-  .aparicao-enter-active {
+.menu {
+  text-align: right;
+  padding: 0 30px;
+  gap: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.aparicao-enter-active {
   transition: all 1s ease-out;
 }
 

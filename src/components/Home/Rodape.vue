@@ -12,33 +12,33 @@
 </template>
 
 <script>
-  export default {
-    name: "Rodape"
-  }
+export default {
+  name: "Rodape"
+}
 </script>
 
 <style scoped>
-  footer {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px;
-    text-align: center;
-    background-color: #D9D9D9;
-    border-radius-top-left: 20px;
-    border-radius-top-right: 20px;
-  }
-  
-  footer h1 {
-    text-align: center;
-  }
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  text-align: center;
+  background-color: #D9D9D9;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
 
-  .links {
-    display: flex;
-    justify-content: space-around;
-  }
+footer h1 {
+  text-align: center;
+}
 
-  .links a {
-    font-weight: bold;
-  }
+.links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.links a {
+  font-weight: bold;
+}
 </style>

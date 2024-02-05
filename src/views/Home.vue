@@ -1,6 +1,6 @@
 <template>
   <header>
-    <Navbar/>
+    <Navbar />
   </header>
   <main>
     <Slogan />
@@ -12,14 +12,8 @@
 </template>
 
 <script setup>
-  import Navbar from "../components/Home/Navbar.vue";
-  import Slogan from "../components/Home/Slogan.vue";
-  import Rodape from "../components/Home/Rodape.vue";
-  import BotaoFuncionalidade from "../components/Home/BotaoFuncionalidade.vue";
+import Navbar from "../components/Home/Navbar.vue";
+import Slogan from "../components/Home/Slogan.vue";
+import Rodape from "../components/Home/Rodape.vue";
+import BotaoFuncionalidade from "../components/Home/BotaoFuncionalidade.vue";
 </script>
-
-<style scoped>
-  footer {
-    border-radius-top: 20px;
-  }
-</style>

@@ -7,20 +7,20 @@
 </template>
 
 <script>
-  export default {
-    name: "Slogan"
-  }
+export default {
+  name: "Slogan"
+}
 </script>
 
 <style scoped>
-  .slogan {
-    padding: 15px;
-    background-color: #D9D9D9;
-    text-align: center;
-  }
-  
-  .slogan p {
-    font-family: "Anton", sans-serif;
-    font-size: 19px;
-  }
+.slogan {
+  padding: 15px;
+  background-color: #D9D9D9;
+  text-align: center;
+}
+
+.slogan p {
+  font-family: "Anton", sans-serif;
+  font-size: 19px;
+}
 </style>
