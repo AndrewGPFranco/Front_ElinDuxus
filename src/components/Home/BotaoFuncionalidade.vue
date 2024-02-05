@@ -69,7 +69,7 @@ export default {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: green;
+    background-color: black;
     margin-bottom: 5px;
   }
 </style>

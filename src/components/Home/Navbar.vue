@@ -10,6 +10,7 @@
       <img v-if="exibir" src="../../assets/Home/close.png" alt="Icone de um menu Hambúrguer" />
     </button>
   </nav>
+  <TransitionGroup name="aparicao">
   <div class="menu" v-if="exibir">
     <a href="https://github.com/AndrewGPSilva/apiElinDuxus" target="_blank">
       Repositório API
@@ -18,6 +19,7 @@
       Repositório FRONT-END
     </a>
   </div>
+  </TransitionGroup>
 </template>
 
 <script>
@@ -63,4 +65,18 @@
     flex-direction: column;
     font-weight: bold;
   }
+
+  .aparicao-enter-active {
+  transition: all 1s ease-out;
+}
+
+.aparicao-leave-active {
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.aparicao-enter-from,
+.aparicao-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
 </style>
