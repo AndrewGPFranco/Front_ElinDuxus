@@ -65,9 +65,9 @@ export default {
   
 <style scoped>
 .container {
-    padding: 120px;
+    padding: 60px;
 }
-
+    
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -85,7 +85,6 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    max-width: 400px;
     margin: 0 auto;
 }
 
@@ -146,5 +145,15 @@ li {
     margin-bottom: 15px;
 }
 
-  
+  footer {
+        bottom: 0;
+        position: fixed;
+        width: 100vw;
+  }
+
+    @media (min-width: 1280px) {
+    .container {
+        padding: 120px;
+    }
+    }
 </style>

@@ -45,6 +45,7 @@ export default {
     },
     methods: {
         franquiaMaisFamosa() {
+          console.log("deu certo");
             const url = `http://localhost:8080/api/times/franquiamaisfamosa?dataInicial=${this.dataInicial}&dataFinal=${this.dataFinal}`;
             axios.get(url)
                 .then((response) => {
@@ -148,4 +149,10 @@ li {
 .resultado h2 {
     margin-bottom: 15px;
 }
+
+    footer {
+        bottom: 0;
+        position: fixed;
+        width: 100vw;
+    }
 </style>

@@ -148,4 +148,10 @@ li {
 .resultado h2 {
     margin-bottom: 15px;
 }
+
+    footer {
+        bottom: 0;
+        position: fixed;
+        width: 100vw;
+    }
 </style>
