@@ -13,7 +13,7 @@
                 </div>
             </form>
             <div class="resultado" v-if="resposta">
-                <h2>Time na data {{ data }}:</h2>
+                <h2>Time na data: {{ data }}:</h2>
                 <ul>
                     <li v-for="(wrestler, index) in resposta['integrantes']" :key="index">
                         {{ wrestler }}

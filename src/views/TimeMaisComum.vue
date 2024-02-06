@@ -15,7 +15,7 @@
                 </div>
             </form>
             <div class="resultado" v-if="resposta">
-                <h2>Time Mais Comuns:</h2>
+                <h2>Time Mais Comum:</h2>
                 <ul>
                     <li v-for="(wrestler, index) in resposta['Time Mais comum']" :key="index">
                         {{ wrestler }}
