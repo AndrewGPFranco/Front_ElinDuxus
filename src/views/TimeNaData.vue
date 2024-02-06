@@ -13,10 +13,10 @@
 <script>
 import Navbar from '../components/Home/Navbar.vue';
 import Rodape from '../components/Home/Rodape.vue';
-import Resultado from '../components/TimeMaisComum/Resultado.vue';
+import Resultado from '../components/TimeNaData/Resultado.vue';
 
 export default {
-    name: "TimeMaisComum",
+    name: "TimeNaData",
     components: {
         Resultado,
         Navbar,

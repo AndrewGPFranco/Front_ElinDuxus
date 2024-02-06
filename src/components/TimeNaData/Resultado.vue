@@ -2,10 +2,8 @@
     <main>
         <div class="container">
             <form @submit.prevent="ativarFuncao">
-                <label for="dataInicial">Data Inicial:</label>
-                <input type="date" v-model="dataInicial" required>
-                <label for="dataFinal">Data Final:</label>
-                <input type="date" v-model="dataFinal" required>
+                <label for="dataInicial">Data:</label>
+                <input type="date" v-model="data" required>
                 <div class="links">
                     <button type="submit">Resultado</button>
                     <router-link to="/">Voltar</router-link>
@@ -14,7 +12,7 @@
             <div class="resultado" v-if="resposta">
                 <h2>Time Mais Comuns:</h2>
                 <ul>
-                    <li v-for="(wrestler, index) in resposta['Time Mais comum']" :key="index">
+                    <li v-for="(wrestler, index) in resposta['integrantes']" :key="index">
                         {{ wrestler }}
                     </li>
                 </ul>
@@ -31,13 +29,12 @@ export default {
     data() {
         return {
             resposta: null,
-            dataInicial: '',
-            dataFinal: '',
+            data: ''
         };
     },
     methods: {
         timeMaisComum() {
-            const url = `http://localhost:8080/api/times/timemaiscomum?dataInicial=${this.dataInicial}&dataFinal=${this.dataFinal}`;
+            const url = `http://localhost:8080/api/times/timenadata?data=${this.data}`;
             axios.get(url)
                 .then((response) => {
                     this.resposta = response.data;
@@ -56,7 +53,7 @@ export default {
   
 <style scoped>
 .container {
-    padding: 70px;
+    padding: 120px;
 }
 
 body {
