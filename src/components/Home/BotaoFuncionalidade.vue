@@ -1,8 +1,12 @@
 <template>
   <main>
     <button v-for="func in funcionalidades" :key="func.nome">
-      <div class="circulo"></div>
-      <router-link :to="func.src">{{ func.nome }}</router-link>
+      <router-link :to="func.src">
+        <div class="circulo">
+          <i :class="'pi pi-' + func.icon" style="font-size: 2rem"></i>
+        </div>
+        <span>{{ func.nome }}</span>
+      </router-link>
     </button>
   </main>
 </template>
@@ -13,51 +17,62 @@ export default {
   data() {
     return {
       funcionalidades: [
-        {
-          nome: "Time na Data",
-          src: "timenadata"
-        },
-        {
-          nome: "Integrante mais usado",
-          src: "integrantemaisusado"
-        },
-        {
-          nome: "Time mais comum",
-          src: "timemaiscomum"
-        },
-        {
-          nome: "Função mais comum",
-          src: "funcaomaiscomum"
-        },
-        {
-          nome: "Franquia mais famosa",
-          src: "franquiamaisfamosa"
-        },
-        {
-          nome: "Contagem por franquia",
-          src: "contagemporfranquia"
-        },
-        {
-          nome: "Contagem por função",
-          src: "contagemporfuncao"
-        },
-        {
-          nome: "Cadastrar time",
-          src: "cadastrartime"
-        },
-        {
-          nome: "Cadastrar integrante",
-          src: "contagemintegrante"
-        },
-        {
-          nome: "Todos os times",
-          src: "todosostimes"
-        },
-        {
-          nome: "Todos os integrantes",
-          src: "todososintegrantes"
-        }
-      ]
+  {
+    nome: "Time na Data",
+    src: "timenadata",
+    icon: "calendar"
+  },
+  {
+    nome: "Integrante mais usado",
+    src: "integrantemaisusado",
+    icon: "user"
+  },
+  {
+    nome: "Time mais comum",
+    src: "timemaiscomum",
+    icon: "chart-bar"
+  },
+  {
+    nome: "Função mais comum",
+    src: "funcaomaiscomum",
+    icon: "briefcase"
+  },
+  {
+    nome: "Franquia mais famosa",
+    src: "franquiamaisfamosa",
+    icon: "flag"
+  },
+  {
+    nome: "Contagem por franquia",
+    src: "contagemporfranquia",
+    icon: "chart-line"
+  },
+  {
+    nome: "Contagem por função",
+    src: "contagemporfuncao",
+    icon: "chart-pie"
+  },
+  {
+    nome: "Cadastrar time",
+    src: "cadastrartime",
+    icon: "plus-circle"
+  },
+  {
+    nome: "Cadastrar integrante",
+    src: "contagemintegrante",
+    icon: "user-plus"
+  },
+  {
+    nome: "Todos os times",
+    src: "todosostimes",
+    icon: "list"
+  },
+  {
+    nome: "Todos os integrantes",
+    src: "todososintegrantes",
+    icon: "users"
+  }
+]
     };
   }
 };
@@ -84,9 +99,18 @@ button {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: black;
-  margin-bottom: 5px;
 }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  span {
+    color: blue;
+  }
 
 @media (min-width: 1280px) {
   main {
