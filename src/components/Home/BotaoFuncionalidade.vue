@@ -87,4 +87,9 @@ button {
   background-color: black;
   margin-bottom: 5px;
 }
+  @media (min-width: 1280px) {
+    main {
+      padding: 110px;
+    }
+  }
 </style>
