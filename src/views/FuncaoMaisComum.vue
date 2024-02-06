@@ -44,7 +44,7 @@ export default {
         };
     },
     methods: {
-        timeMaisComum() {
+        funcaoMaisComum() {
             const url = `http://localhost:8080/api/times/funcaomaiscomum?dataInicial=${this.dataInicial}&dataFinal=${this.dataFinal}`;
             axios.get(url)
                 .then((response) => {
@@ -56,7 +56,7 @@ export default {
                 });
         },
         ativarFuncao() {
-            this.timeMaisComum();
+            this.funcaoMaisComum();
         },
     },
     components: {

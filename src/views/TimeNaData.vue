@@ -41,7 +41,7 @@ export default {
         };
     },
     methods: {
-        timeMaisComum() {
+        timeNaData() {
             const url = `http://localhost:8080/api/times/timenadata?data=${this.data}`;
             axios.get(url)
                 .then((response) => {
@@ -53,7 +53,7 @@ export default {
                 });
         },
         ativarFuncao() {
-            this.timeMaisComum();
+            this.timeNaData();
         },
     },
     components: {
@@ -145,4 +145,6 @@ li {
 .resultado h2 {
     margin-bottom: 15px;
 }
+
+  
 </style>

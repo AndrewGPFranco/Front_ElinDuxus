@@ -44,7 +44,7 @@ export default {
         };
     },
     methods: {
-        timeMaisComum() {
+        integranteMaisUsado() {
             const url = `http://localhost:8080/api/times/integrantemaisusado?dataInicial=${this.dataInicial}&dataFinal=${this.dataFinal}`;
             axios.get(url)
                 .then((response) => {
@@ -56,7 +56,7 @@ export default {
                 });
         },
         ativarFuncao() {
-            this.timeMaisComum();
+            this.integranteMaisUsado();
         },
     },
     components: {
