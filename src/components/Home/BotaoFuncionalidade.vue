@@ -2,7 +2,7 @@
   <main>
     <button v-for="func in funcionalidades" :key="func.nome">
       <div class="circulo"></div>
-        <router-link :to="func.src">{{ func.nome }}</router-link>
+      <router-link :to="func.src">{{ func.nome }}</router-link>
     </button>
   </main>
 </template>
@@ -13,11 +13,11 @@ export default {
   data() {
     return {
       funcionalidades: [
-        { 
+        {
           nome: "Time na Data",
           src: "timenadata"
         },
-        { 
+        {
           nome: "Integrante mais usado",
           src: "integrantemaisusado"
         },
@@ -87,9 +87,11 @@ button {
   background-color: black;
   margin-bottom: 5px;
 }
-  @media (min-width: 1280px) {
-    main {
-      padding: 110px;
-    }
+
+@media (min-width: 1280px) {
+  main {
+    padding: 110px;
   }
+}
+
 </style>
