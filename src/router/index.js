@@ -5,6 +5,7 @@ import TimeMaisComum from "../views/TimeMaisComum.vue";
 import TimeNaData from "../views/TimeNaData.vue";
 import IntegranteMaisUsado from "../views/IntegranteMaisUsado.vue";
 import FuncaoMaisComum from "../views/FuncaoMaisComum.vue";
+import FranquiaMaisFamosa from "../views/FranquiaMaisFamosa.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +39,11 @@ const router = createRouter({
       path: "/funcaomaiscomum",
       name: "funcaomaiscomum",
       component: FuncaoMaisComum
+    },
+    {
+      path: "/franquiamaisfamosa",
+      name: "franquiamaisfamosa",
+      component: FranquiaMaisFamosa
     }
   ],
 });
