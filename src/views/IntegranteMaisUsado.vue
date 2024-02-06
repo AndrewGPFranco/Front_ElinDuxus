@@ -1,4 +1,7 @@
 <template>
+    <header>
+        <Navbar />
+    </header>
     <main>
         <div class="container">
             <form @submit.prevent="ativarFuncao">
@@ -12,22 +15,27 @@
                 </div>
             </form>
             <div class="resultado" v-if="resposta">
-                <h2>Time Mais Comuns:</h2>
+                <h2>Integrante mais usado:</h2>
                 <ul>
-                    <li v-for="(wrestler, index) in resposta['Time Mais comum']" :key="index">
+                    <li v-for="(wrestler, index) in resposta" :key="index">
                         {{ wrestler }}
                     </li>
                 </ul>
             </div>
         </div>
     </main>
+    <footer>
+        <Rodape />
+    </footer>
 </template>
   
 <script>
 import axios from 'axios';
+import Navbar from '../components/Home/Navbar.vue';
+import Rodape from '../components/Home/Rodape.vue';
 
 export default {
-    name: 'Resultado',
+    name: 'IntegranteMaisUsado',
     data() {
         return {
             resposta: null,
@@ -37,7 +45,7 @@ export default {
     },
     methods: {
         timeMaisComum() {
-            const url = `http://localhost:8080/api/times/timemaiscomum?dataInicial=${this.dataInicial}&dataFinal=${this.dataFinal}`;
+            const url = `http://localhost:8080/api/times/integrantemaisusado?dataInicial=${this.dataInicial}&dataFinal=${this.dataFinal}`;
             axios.get(url)
                 .then((response) => {
                     this.resposta = response.data;
@@ -50,6 +58,10 @@ export default {
         ativarFuncao() {
             this.timeMaisComum();
         },
+    },
+    components: {
+        Navbar,
+        Rodape
     }
 };
 </script>
