@@ -6,6 +6,8 @@ import TimeNaData from "../views/TimeNaData.vue";
 import IntegranteMaisUsado from "../views/IntegranteMaisUsado.vue";
 import FuncaoMaisComum from "../views/FuncaoMaisComum.vue";
 import FranquiaMaisFamosa from "../views/FranquiaMaisFamosa.vue";
+import ContagemPorFranquia from "../views/ContagemPorFranquia.vue";
+import ContagemPorFuncao from "../views/ContagemPorFuncao.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,7 +46,17 @@ const router = createRouter({
       path: "/franquiamaisfamosa",
       name: "franquiamaisfamosa",
       component: FranquiaMaisFamosa
-    }
+    },
+    {
+      path: "/contagemporfranquia",
+      name: "contagemporfranquia",
+      component: ContagemPorFranquia
+    },
+{
+      path: "/contagemporfuncao",
+      name: "contagemporfuncao",
+      component: ContagemPorFuncao
+}
   ],
 });
 
