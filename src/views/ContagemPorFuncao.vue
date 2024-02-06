@@ -1,25 +1,70 @@
 <template>
-  <header>
-    <Navbar />
-  </header>
-  <h1>
-    Contagem por função 
-  </h1>
-  <footer>
-    <Rodape />
-  </footer>
+    <header>
+        <Navbar />
+    </header>
+    <main>
+        <div class="container">
+            <form @submit.prevent="ativarFuncao">
+                <label for="dataInicial">Data Inicial:</label>
+                <input type="date" v-model="dataInicial" required>
+                <label for="dataFinal">Data Final:</label>
+                <input type="date" v-model="dataFinal" required>
+                <div class="links">
+                    <button type="submit">Resultado</button>
+                    <router-link to="/">Voltar</router-link>
+                </div>
+            </form>
+            <div class="resultado" v-if="resposta">
+                <h2>Contagem por função:</h2>
+                <ul>
+                    <li v-for="(wrestler, index) in resposta" :key="index">
+                        {{ index }} : {{ wrestler }} 
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <Rodape />
+    </footer>
 </template>
-
+  
 <script>
+import axios from 'axios';
 import Navbar from '../components/Home/Navbar.vue';
 import Rodape from '../components/Home/Rodape.vue';
-  export default {
-    name: "ContagemPorFuncao",
+
+export default {
+    name: 'ContagemPorFuncao',
+    data() {
+        return {
+            resposta: null,
+            dataInicial: '',
+            dataFinal: '',
+        };
+    },
+    methods: {
+        franquiaMaisFamosa() {
+          console.log("deu certo");
+            const url = `http://localhost:8080/api/times/contagemporfuncao?dataInicial=${this.dataInicial}&dataFinal=${this.dataFinal}`;
+            axios.get(url)
+                .then((response) => {
+                    this.resposta = response.data;
+                    console.log(response.data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        },
+        ativarFuncao() {
+            this.franquiaMaisFamosa();
+        },
+    },
     components: {
-      Navbar,
-      Rodape
+        Navbar,
+        Rodape
     }
-  }
+};
 </script>
 
 <style scoped>
@@ -99,6 +144,7 @@ li {
 .resultado {
     margin-top: 20px;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .resultado h2 {

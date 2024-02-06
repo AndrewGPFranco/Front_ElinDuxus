@@ -143,6 +143,7 @@ li {
 .resultado {
     margin-top: 20px;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .resultado h2 {
