@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <form @submit.prevent="ativarFuncao">
             <label for="dataInicial">Data Inicial:</label>
             <input type="date" v-model="dataInicial" required>
@@ -7,7 +7,10 @@
             <label for="dataFinal">Data Final:</label>
             <input type="date" v-model="dataFinal" required>
 
-            <button type="submit">Resultado</button>
+            <div class="links">
+                <button type="submit">Resultado</button>
+                <router-link to="/">Voltar</router-link>
+            </div>
         </form>
 
         <div class="resultado" v-if="resposta">
@@ -52,7 +55,11 @@ export default {
 };
 </script>
   
-<style>
+<style scoped>
+.container {
+    padding: 100px;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -87,8 +94,17 @@ input {
     box-sizing: border-box;
 }
 
+.links {
+    display: flex;
+    flex-direction: column;
+}
+
+.links a {
+    margin-top: 13px;
+}
+
 button {
-    background-color: #007bff!important;
+    background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
     border: none;

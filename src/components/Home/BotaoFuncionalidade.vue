@@ -2,7 +2,7 @@
   <main>
     <button v-for="func in funcionalidades" :key="func.nome">
       <div class="circulo"></div>
-      {{ func.nome }}
+        <router-link :to="func.src">{{ func.nome }}</router-link>
     </button>
   </main>
 </template>
@@ -13,34 +13,49 @@ export default {
   data() {
     return {
       funcionalidades: [
-        { nome: "Time na Data" },
-        { nome: "Integrante mais usado" },
-        {
-          nome: "Time mais comum"
+        { 
+          nome: "Time na Data",
+          src: "timenadata"
+        },
+        { 
+          nome: "Integrante mais usado",
+          src: "integrantemaisusado"
         },
         {
-          nome: "Função mais comum"
+          nome: "Time mais comum",
+          src: "timemaiscomum"
         },
         {
-          nome: "Franquia mais famosa"
+          nome: "Função mais comum",
+          src: "funcaomaiscomum"
         },
         {
-          nome: "Contagem por franquia"
+          nome: "Franquia mais famosa",
+          src: "franquiamaisfamosa"
         },
         {
-          nome: "Contagem por função"
+          nome: "Contagem por franquia",
+          src: "contagemporfranquia"
         },
         {
-          nome: "Cadastrar time"
+          nome: "Contagem por função",
+          src: "contagemporfuncao"
         },
         {
-          nome: "Cadastrar integrante"
+          nome: "Cadastrar time",
+          src: "cadastrartime"
         },
         {
-          nome: "Todos os times"
+          nome: "Cadastrar integrante",
+          src: "contagemintegrante"
         },
         {
-          nome: "Todos os integrantes"
+          nome: "Todos os times",
+          src: "todosostimes"
+        },
+        {
+          nome: "Todos os integrantes",
+          src: "todososintegrantes"
         }
       ]
     };
