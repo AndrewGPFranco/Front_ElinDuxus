@@ -3,6 +3,9 @@
         <Navbar />
     </header>
     <div class="container">
+        <div v-if="showSuccessMessage" class="success-message">
+            Time cadastrado com sucesso!
+        </div>
         <h1>Cadastrar Time</h1>
         <form @submit.prevent="cadastrarTime">
             <label for="nome">Nome do Time:</label>
@@ -33,7 +36,8 @@ export default {
             nome: '',
             data: '',
             integrantes: [],
-            integrantesDisponiveis: []
+            integrantesDisponiveis: [],
+            showSuccessMessage: false
         };
     },
     methods: {
@@ -49,6 +53,10 @@ export default {
                     this.nome = '';
                     this.data = '';
                     this.integrantes = [];
+                    this.showSuccessMessage = true;
+                    setTimeout(() => {
+                        this.showSuccessMessage = false;
+                    }, 5000); // 5 segundos
                 })
                 .catch(error => {
                     console.error('Erro ao cadastrar time:', error);
@@ -135,5 +143,12 @@ footer {
         text-align: center;
     }
 }
-</style>
 
+.success-message {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+</style>

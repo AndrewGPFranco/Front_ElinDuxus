@@ -13,6 +13,9 @@
             <input type="text" id="funcao" v-model="funcao" required>
             <button type="submit">Cadastrar</button>
         </form>
+        <div v-if="showSuccessMessage" class="success-message">
+            Integrante cadastrado com sucesso!
+        </div>
     </div>
     <footer>
         <Rodape />
@@ -29,7 +32,8 @@ export default {
         return {
             nome: '',
             franquia: '',
-            funcao: ''
+            funcao: '',
+            showSuccessMessage: false
         };
     },
     methods: {
@@ -45,6 +49,10 @@ export default {
                     this.nome = '';
                     this.franquia = '';
                     this.funcao = '';
+                    this.showSuccessMessage = true;
+                    setTimeout(() => {
+                        this.showSuccessMessage = false;
+                    }, 5000); // 5 segundos
                 })
                 .catch(error => {
                     console.error('Erro ao cadastrar integrante:', error);
@@ -99,5 +107,12 @@ button:hover {
 div {
     text-align: center;
 }
+
+.success-message {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
 </style>
-  
