@@ -16,4 +16,4 @@ Após esses passos é só utilizar:
 
 npm run dev
 
-E vá até o link que é fornecido no próprio terminar assim que você utiliza tal comando!
+E vá até o link que é fornecido no próprio terminal assim que você utiliza tal comando!
