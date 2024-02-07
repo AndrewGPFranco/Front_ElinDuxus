@@ -3,6 +3,9 @@
         <Navbar />
     </header>
     <div>
+        <div v-if="showSuccessMessage" class="success-message">
+            Integrante cadastrado com sucesso!
+        </div>
         <h1>Cadastrar Integrante</h1>
         <form @submit.prevent="cadastrarIntegrante">
             <label for="nome">Nome do Integrante:</label>
@@ -13,9 +16,6 @@
             <input type="text" id="funcao" v-model="funcao" required>
             <button type="submit">Cadastrar</button>
         </form>
-        <div v-if="showSuccessMessage" class="success-message">
-            Integrante cadastrado com sucesso!
-        </div>
     </div>
     <footer>
         <Rodape />
