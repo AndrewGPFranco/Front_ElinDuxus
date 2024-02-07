@@ -67,7 +67,7 @@ export default {
 .container {
     padding: 60px;
 }
-    
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -146,15 +146,15 @@ li {
     margin-bottom: 15px;
 }
 
-  footer {
-        bottom: 0;
-        position: fixed;
-        width: 100vw;
-  }
+footer {
+    bottom: 0;
+    position: fixed;
+    width: 100vw;
+}
 
-    @media (min-width: 1280px) {
+@media (min-width: 1280px) {
     .container {
         padding: 120px;
     }
-    }
+}
 </style>
