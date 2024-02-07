@@ -78,6 +78,7 @@ export default {
 
 main {
     padding: 30px;
+    margin-bottom: 100px;
 }
 
 footer {

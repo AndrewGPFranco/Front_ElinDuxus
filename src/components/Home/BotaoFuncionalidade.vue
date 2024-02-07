@@ -59,7 +59,7 @@ export default {
   },
   {
     nome: "Cadastrar integrante",
-    src: "contagemintegrante",
+    src: "cadastrarintegrante",
     icon: "user-plus"
   },
   {

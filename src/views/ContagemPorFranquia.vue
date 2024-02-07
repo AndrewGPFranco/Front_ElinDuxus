@@ -18,7 +18,7 @@
                 <h2>Contagem por franquia:</h2>
                 <ul>
                     <li v-for="(index, wrestler) in resposta" :key="index">
-                         {{ wrestler }} : {{ index  }}
+                        {{ wrestler }} : {{ index }}
                     </li>
                 </ul>
             </div>
@@ -150,9 +150,9 @@ li {
     margin-bottom: 15px;
 }
 
-    footer {
-        bottom: 0;
-        position: fixed;
-        width: 100vw;
-    }
+footer {
+    bottom: 0;
+    position: fixed;
+    width: 100vw;
+}
 </style>
