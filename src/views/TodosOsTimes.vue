@@ -2,6 +2,7 @@
     <header>
         <Navbar />
     </header>
+    <h1 class="titulo">Times já cadastrados:</h1>
     <div v-for="time in resposta" :key="time.id">
         <div v-if="time.nome !== null">
             <h1>
@@ -94,5 +95,15 @@ ul {
 
 li {
     list-style-type: none;
+}
+
+footer {
+    bottom: 0;
+    position: fixed;
+    width: 100vw;
+}
+
+h1 {
+    text-align: center;
 }
 </style>

@@ -108,6 +108,12 @@ div {
     text-align: center;
 }
 
+footer {
+    bottom: 0;
+    position: fixed;
+    width: 100vw;
+}
+
 .success-message {
     background-color: #4caf50;
     color: #ffffff;
